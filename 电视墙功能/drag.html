@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  #bigScene{
+    width: 808px;
+    height: 912px;
+    margin: auto;
+    line-height: 912px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+  
+  }
+  .smallScene{
+    width: 400px;
+    height: 300px;
+    border: 2px salmon solid;
+  }
+  .cloneDiv{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background-color: powderblue;
+    top:0;
+    left: 0;
+  }
+  .drag{
+    width: 100px;
+    height: 100px;
+    background: pink;
+    position: absolute;
+    top: 0px;
+  }
+</style>
+<body>
+  <div id="bigScene">
+    <div class="smallScene"></div>
+    <div class="smallScene"></div>
+    <div class="smallScene"></div>
+    <div class="smallScene"></div>
+    <div class="smallScene"></div>
+    <div class="smallScene"></div>
+  </div>
+  <div class="drag"></div>
+</body>
+<script src='./drag.js'></script>
+<script>
+  const parent = document.querySelector('#bigScene')
+  const drag = new Drag(document.querySelector('.drag'), parent)
+ 
+  
+   
+</script>
+</html>
